@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Recipe Organizer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Recipe List Section -->
+  <section id="recipes-section">
+    <h2>Recipes</h2>
+    <button id="add-recipe-btn">+ Add New Recipe</button>
+    <div id="recipes-list"></div>
+  </section>
+
+  <!-- Recipe View Section (Read-only) -->
+  <section id="recipe-view-section" style="display: none;">
+    <button id="back-to-list">← Back</button>
+    <h2 id="view-title"></h2>
+    <img id="view-photo" src="" alt="Recipe Photo" />
+    <div id="photo-error-message" style="color: red; margin-top: 0.5rem;"></div>
+    <p id="view-description"></p>
+
+    <h3>Ingredients</h3>
+    <ul id="view-ingredients"></ul>
+
+    <h3>Instructions</h3>
+    <ol id="view-instructions"></ol>
+
+    <button id="edit-recipe">Edit</button>
+    <button id="delete-recipe" class="delete">Delete</button>
+  </section>
+
+  <!-- Recipe Form Section -->
+  <section id="recipe-form-section" style="display: none;">
+    <h2 id="form-title">Add Recipe</h2>
+    <form id="recipe-form">
+      <input type="text" id="title" placeholder="Title" required />
+      <textarea id="description" placeholder="Description" required></textarea>
+      <textarea id="ingredients" placeholder="Ingredients (one per line)" required></textarea>
+      <textarea id="instructions" placeholder="Instructions (one per line)" required></textarea>
+      <input type="url" id="photo" placeholder="Optional photo (https://www.example.com)" />
+      <button type="submit">Save Recipe</button>
+      <button type="button" id="cancel-btn">Cancel</button>
+    </form>
+    <div id="form-message"></div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
